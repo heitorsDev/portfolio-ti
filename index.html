@@ -68,9 +68,13 @@
             z-index: -1;
             top: 0;
             transition: all 0.5s ease;
+            font-size: 10px;
+            font-weight: bold;
+            
         }
 
         .language {
+            margin-left: 3px;
             height: 90px;
             width: 90px;
             object-fit: contain;
@@ -121,6 +125,15 @@
             margin: 10px;
             font-size: 80px;
         }
+        #name-2{
+            font-size: 40px;
+            z-index: -1;
+            left: 0px;
+            top: 10px;
+            position: absolute;
+            transition: all 0.5s ease;
+            transform: rotate(15deg);
+        }
     </style>
 </head>
 
@@ -129,18 +142,23 @@
         <div class="first-screen-text">
             <div id="languages">
                 <img class="language" src="https://logodownload.org/wp-content/uploads/2016/10/html5-logo-9.png" alt="">
+                HTML5
                 <img class="language"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
                     alt="">
+                    CSS3
                 <img class="language"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
                     alt="">
+                    JS
                 <img class="language"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
                 alt="">
+                React
             </div>
             <div class="zindexonetext">
                 <img src="img/foto-eitor.jfif" id="picture" alt="">
+                <div id="name-2" >Heitor &rarr;</div>
                 <div class="title" onmouseenter="picFinalPos()" onmouseleave="picFirstPos()">Heitor Hillesheim</div>
                 <div class="subtitle" onmouseenter="langFinalPos()" onmouseleave="langFirstPos()">Front-end Dev</div>
             </div>
@@ -159,11 +177,16 @@
         <h2 class="projects-title">Projetos</h2>
     </div>
     <script>
+        const name = document.getElementById("name-2");
+
         const picture = document.getElementById("picture");
         function picFinalPos() {
             picture.style.left = "-140px"
+            
+            name.style.left = "-290px"
         }
         function picFirstPos() {
+            name.style.left = "0px"
             picture.style.left = "0px"
         }
         const langs = document.getElementById("languages");
