@@ -9,136 +9,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            font-family: "Nunito", sans-serif;
-            font-optical-sizing: auto;
-            max-width: 100vw;
-            font-style: normal;
-
-        }
-
-        .screen {
-            background: rgb(255, 255, 255);
-            background: radial-gradient(circle, rgba(255, 255, 255, 1) 66%, rgba(148, 187, 233, 1) 100%);
-            max-width: 100vw;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .first-screen-text {
-            z-index: 2;
-            position: relative;
-            font-size: 70px;
-        }
-
-        .title {
-            font-weight: bold;
-            z-index: 1;
-            background-color: black;
-            color: white;
-            cursor: pointer;
-        }
-
-        .subtitle {
-            z-index: 1;
-            background-color: white;
-            cursor: pointer;
-        }
-
-        #picture {
-            width: 100px;
-            position: absolute;
-            z-index: -1;
-            top: 0px;
-            transition: all 0.5s ease;
-            left: 0px;
-            height: 100%;
-            width: auto;
-        }
-
-        #languages {
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            transition: all 0.5s ease;
-            font-size: 10px;
-            font-weight: bold;
-            
-        }
-
-        .language {
-            margin-left: 3px;
-            height: 90px;
-            width: 90px;
-            object-fit: contain;
-        }
-
-        .zindexonetext {
-            z-index: 1;
-        }
-
-        .second-screen {
-            background-color: black;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            color: white;
-            align-items: center;
-            align-content: center;
-            
-            justify-content: center;
-        }
-        .about-text{
-            text-align: left;
-            font-size: 30px;
-            width: 500px;
-            height: fit-content;
-        }
-        h2{
-            margin: 0;
-            font-weight: bold;
-        }
-        .picture-2{
-            
-            width: 300px;
-            object-fit: contain;
-            height: 400px;
-        }
-        .third-screen {
-            background-color: white;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            color: black;
-            align-content: center;
-            flex-direction: column;
-        }
-        .projects-title{
-            text-align: center;
-            margin: 10px;
-            font-size: 80px;
-        }
-        #name-2{
-            font-size: 40px;
-            z-index: -1;
-            left: 0px;
-            top: 10px;
-            position: absolute;
-            transition: all 0.5s ease;
-            transform: rotate(15deg);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="screen">
+    <div class="sidebar" onmouseenter="sidebarFinalPos()" onmouseleave="sidebarFirstPos()">
+        <div class="sidebar-buttons">
+            <div class="sidebar-button" onclick="scrollToId('inicio')">
+                <div>Início</div> <div>&lt</div>
+            </div>
+            <div class="sidebar-button" onclick="scrollToId('sobre')"> 
+                <div>Sobre</div> <div>&lt</div>
+            </div>
+            <div class="sidebar-button" onclick="scrollToId('projetos')">
+                <div>Projetos</div> <div>&lt</div>
+            </div>
+        </div>
+        <div class="sidebar-get">
+            <div id="sidebar-get-symbol">
+                >
+            </div>
+        </div>
+    </div>
+    <div class="screen" id="inicio">
+
         <div class="first-screen-text">
             <div id="languages">
                 <img class="language" src="https://logodownload.org/wp-content/uploads/2016/10/html5-logo-9.png" alt="">
@@ -164,7 +58,7 @@
             </div>
         </div>
     </div>
-    <div class="second-screen">
+    <div class="second-screen" id="sobre">
         <div class="about-text">
             <h2>Sobre mim</h2>
             Meu nome é Heitor Hillesheim dos Santos, tenho 16 anos e atualmente curso desenvolvimento de sistemas no Senai. Tenho interesse pela
@@ -173,31 +67,10 @@
         <img src="img/foto-eitor-2.jfif" class="picture-2" alt="">
 
     </div>
-    <div class="third-screen">
+    <div class="third-screen" id="projetos">
         <h2 class="projects-title">Projetos</h2>
     </div>
-    <script>
-        const name = document.getElementById("name-2");
-
-        const picture = document.getElementById("picture");
-        function picFinalPos() {
-            picture.style.left = "-140px"
-            
-            name.style.left = "-290px"
-        }
-        function picFirstPos() {
-            name.style.left = "0px"
-            picture.style.left = "0px"
-        }
-        const langs = document.getElementById("languages");
-        function langFinalPos() {
-            langs.style.top = "-100px"
-        }
-        function langFirstPos() {
-            langs.style.top = "0px"
-        }
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
