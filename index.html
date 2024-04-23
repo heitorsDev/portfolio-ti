@@ -1,76 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Heitor</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
 
-<body>
-    <div class="sidebar" onmouseenter="sidebarFinalPos()" onmouseleave="sidebarFirstPos()">
-        <div class="sidebar-buttons">
-            <div class="sidebar-button" onclick="scrollToId('inicio')">
-                <div>Início</div> <div>&lt</div>
-            </div>
-            <div class="sidebar-button" onclick="scrollToId('sobre')"> 
-                <div>Sobre</div> <div>&lt</div>
-            </div>
-            <div class="sidebar-button" onclick="scrollToId('projetos')">
-                <div>Projetos</div> <div>&lt</div>
-            </div>
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="sidebar"
+      onmouseenter="sidebarFinalPos()"
+      onmouseleave="sidebarFirstPos()"
+    >
+      <div class="sidebar-buttons">
+        <div class="sidebar-button" onclick="scrollToId('inicio')">
+          <div>Início</div>
+          <div>&lt</div>
         </div>
-        <div class="sidebar-get">
-            <div id="sidebar-get-symbol">
-                >
-            </div>
+        <div class="sidebar-button" onclick="scrollToId('sobre')">
+          <div>Sobre</div>
+          <div>&lt</div>
         </div>
+        <div class="sidebar-button" onclick="scrollToId('projetos')">
+          <div>Projetos</div>
+          <div>&lt</div>
+        </div>
+      </div>
+      <div class="sidebar-get">
+        <div id="sidebar-get-symbol">></div>
+      </div>
     </div>
     <div class="screen" id="inicio">
-
-        <div class="first-screen-text">
-            <div id="languages">
-                <img class="language" src="https://logodownload.org/wp-content/uploads/2016/10/html5-logo-9.png" alt="">
-                HTML5
-                <img class="language"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
-                    alt="">
-                    CSS3
-                <img class="language"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
-                    alt="">
-                    JS
-                <img class="language"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
-                alt="">
-                React
-            </div>
-            <div class="zindexonetext">
-                <img src="img/foto-eitor.jfif" id="picture" alt="">
-                <div id="name-2" >Heitor &rarr;</div>
-                <div class="title" onmouseenter="picFinalPos()" onmouseleave="picFirstPos()">Heitor Hillesheim</div>
-                <div class="subtitle" onmouseenter="langFinalPos()" onmouseleave="langFirstPos()">Front-end Dev</div>
-            </div>
+      <div class="first-screen-text">
+        <div id="languages">
+          <img
+            class="language"
+            src="https://logodownload.org/wp-content/uploads/2016/10/html5-logo-9.png"
+            alt=""
+          />
+          HTML5
+          <img
+            class="language"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
+            alt=""
+          />
+          CSS3
+          <img
+            class="language"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
+            alt=""
+          />
+          JS
+          <img
+            class="language"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+            alt=""
+          />
+          React
         </div>
+        <div class="zindexonetext">
+          <img src="img/foto-eitor.jfif" id="picture" alt="" />
+          <div id="name-2">Heitor &rarr;</div>
+          <div
+            class="title"
+            onmouseenter="picFinalPos()"
+            onmouseleave="picFirstPos()"
+          >
+            Heitor Hillesheim
+          </div>
+          <div
+            class="subtitle"
+            onmouseenter="langFinalPos()"
+            onmouseleave="langFirstPos()"
+          >
+            Front-end Dev
+          </div>
+        </div>
+      </div>
     </div>
     <div class="second-screen" id="sobre">
-        <div class="about-text">
-            <h2>Sobre mim</h2>
-            Meu nome é Heitor Hillesheim dos Santos, tenho 16 anos e atualmente curso desenvolvimento de sistemas no Senai. Tenho interesse pela
-            programação e fazer robôs.
-        </div>
-        <img src="img/foto-eitor-2.jfif" class="picture-2" alt="">
-
+      <div class="about-text">
+        <h2>Sobre mim</h2>
+        Meu nome é Heitor Hillesheim dos Santos, tenho 16 anos e atualmente
+        curso desenvolvimento de sistemas no Senai. Tenho interesse pela
+        programação e fazer robôs.
+      </div>
+      <img src="img/foto-eitor-2.jfif" class="picture-2" alt="" />
     </div>
     <div class="third-screen" id="projetos">
-        <h2 class="projects-title">Projetos</h2>
+      <h2 class="projects-title">Projetos</h2>
+      <div class="projects-content">
+        <a href="https://heitorsdev.github.io/avaliacao-fti/" class="project">
+          <h2 class="project-title">Avaliação FTI</h2>
+          <p class="project-text">
+            Nesse trabalho, fizemos uma breve apresentação pessoal para uma avaliação da área de fundamentos de TI. <b>Clique para visualizar.</b>
+          </p>
+          <img
+            class="project-image"
+            src="img/imagem av.png"
+          />
+        </a>
+        <a class="project" href="https://www.canva.com/design/DAF-Ravk4Ak/kKzQaY3l3qWKEPRsgQEjeQ/edit?utm_content=DAF-Ravk4Ak&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
+          <h2 class="project-title">Montando um computador</h2>
+          <p class="project-text">
+            Nesse trabalho, formulamos um computador pensando em seu preço, peças
+            e desempenho dependendo de sua funcionalidade. <b>Clique para visualizar.</b>
+          </p>
+          <img
+            class="project-image"
+            src="https://cdn.dooca.store/559/products/pcgc03-e-7_640x640+fill_ffffff.png?v=1675771263&webp=0"
+            
+          />
+        </a>
+        <a class="project" href="https://docs.google.com/presentation/d/1S_NuDHFk_pGUnqAo8fgEMCaaaAR4tFE18BAxKOANOYw/edit?usp=sharing">
+          <h2 class="project-title">Reconhecimento de periféricos</h2>
+          <p class="project-text">
+            Nessa atividade, conceituamos diversas formas de conexão em computadores, 
+            em seu funcionamento e história. <b>Clique para visualizar.</b>
+          </p>
+          <img
+            class="project-image"
+            src="img/atv usb.png"
+          />
+        </a>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
